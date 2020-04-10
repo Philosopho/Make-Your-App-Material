@@ -26,7 +26,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.android.volley.VolleyError;
@@ -66,6 +68,7 @@ public class ArticleDetailFragment extends Fragment implements
     private SimpleDateFormat outputFormat = new SimpleDateFormat();
     // Most time functions can only handle 1902 - 2037
     private GregorianCalendar START_OF_EPOCH = new GregorianCalendar(2,1,1);
+    private ImageButton fab;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -115,6 +118,7 @@ public class ArticleDetailFragment extends Fragment implements
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.fragment_article_detail, container, false);
+
         mDrawInsetsFrameLayout = (DrawInsetsFrameLayout)
                 mRootView.findViewById(R.id.draw_insets_frame_layout);
         mDrawInsetsFrameLayout.setOnInsetsCallback(new DrawInsetsFrameLayout.OnInsetsCallback() {
@@ -140,7 +144,8 @@ public class ArticleDetailFragment extends Fragment implements
 
         mStatusBarColorDrawable = new ColorDrawable(0);
 
-        mRootView.findViewById(R.id.share_fab).setOnClickListener(new View.OnClickListener() {
+        fab = mRootView.findViewById(R.id.share_fab);
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(Intent.createChooser(ShareCompat.IntentBuilder.from(getActivity())
@@ -150,6 +155,7 @@ public class ArticleDetailFragment extends Fragment implements
             }
         });
 
+        hideViews();
         bindViews();
         updateStatusBar();
         return mRootView;
@@ -210,7 +216,7 @@ public class ArticleDetailFragment extends Fragment implements
 
         if (mCursor != null) {
             mRootView.setAlpha(0);
-            mRootView.setVisibility(View.VISIBLE);
+            showViews();
             mRootView.animate().alpha(1);
             titleView.setText(mCursor.getString(ArticleLoader.Query.TITLE));
             Date publishedDate = parsePublishedDate();
@@ -232,6 +238,7 @@ public class ArticleDetailFragment extends Fragment implements
                                 + "</font>"));
 
             }
+            // Need to trim, split text up. Too long
             bodyView.setText(Html.fromHtml(mCursor.getString(ArticleLoader.Query.BODY).replaceAll("(\r\n|\n)", "<br />")));
             ImageLoaderHelper.getInstance(getActivity()).getImageLoader()
                     .get(mCursor.getString(ArticleLoader.Query.PHOTO_URL), new ImageLoader.ImageListener() {
@@ -254,7 +261,7 @@ public class ArticleDetailFragment extends Fragment implements
                         }
                     });
         } else {
-            mRootView.setVisibility(View.GONE);
+            hideViews();
             titleView.setText("N/A");
             bylineView.setText("N/A" );
             bodyView.setText("N/A");
@@ -300,5 +307,31 @@ public class ArticleDetailFragment extends Fragment implements
         return mIsCard
                 ? (int) mPhotoContainerView.getTranslationY() + mPhotoView.getHeight() - mScrollY
                 : mPhotoView.getHeight() - mScrollY;
+    }
+
+    private void hideScrollView() {
+        mScrollView.setVisibility(View.GONE);
+    }
+
+    private void showScrollView() {
+        mScrollView.setVisibility(View.VISIBLE);
+    }
+
+    private void hideFab() {
+        fab.setVisibility(View.GONE);
+    }
+
+    private void showFab() {
+        fab.setVisibility(View.VISIBLE);
+    }
+
+    private void hideViews() {
+        hideScrollView();
+        hideFab();
+    }
+
+    private void showViews() {
+        showScrollView();
+        showFab();
     }
 }
