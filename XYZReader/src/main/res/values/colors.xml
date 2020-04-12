@@ -19,8 +19,11 @@
     <color name="photo_placeholder">#ccc</color>
 
     <color name="theme_primary">#212121</color>
-    <color name="theme_primary_dark">#04561A</color>
+    <color name="theme_primary_dark">#000000</color>
+    <color name="theme_primary_light">#484848</color>
     <color name="theme_accent">#1a237e</color>
-    <color name="mainWhite">#f5f5f5</color>
+    <color name="secondary">#f5f5f5</color>
+    <color name="secondary_light">#ffffff</color>
+    <color name="secondary_dark">#c2c2c2</color>
     <color name="mainText">#212121</color>
 </resources>
