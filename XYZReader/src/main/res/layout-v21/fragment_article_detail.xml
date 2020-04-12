@@ -20,7 +20,7 @@
                 android:id="@+id/photo_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/mainWhite">
+                android:background="@color/photo_placeholder">
                 <!--suppress AndroidLintContentDescription -->
 
                 <ImageView
@@ -47,6 +47,8 @@
                 android:gravity="center_vertical"
                 android:lineSpacingMultiplier="0.9"
                 android:background="@color/theme_primary"
+                android:paddingStart="@dimen/padding_left_header"
+                android:paddingEnd="@dimen/padding_left_header"
                 android:paddingBottom="@dimen/detail_metabar_title_bottom_padding"
                 android:textColor="@color/mainWhite"
                 android:textSize="@dimen/detail_title_text_size"
@@ -58,6 +60,8 @@
                 style="?android:attr/textAppearanceSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingStart="@dimen/padding_left_header"
+                android:paddingEnd="@dimen/padding_left_header"
                 android:background="@color/theme_primary"
                 android:textColor="@color/mainWhite"
                 tools:text="@tools:sample/lorem"
