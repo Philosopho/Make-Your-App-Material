@@ -5,7 +5,7 @@
     android:id="@+id/draw_insets_frame_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/mainWhite"
+    android:background="@color/secondary"
     >
 
     <com.example.xyzreader.ui.ObservableScrollView
@@ -52,7 +52,7 @@
                 android:paddingStart="@dimen/padding_left_header"
                 android:paddingEnd="@dimen/padding_left_header"
                 android:paddingBottom="@dimen/detail_metabar_title_bottom_padding"
-                android:textColor="@color/mainWhite"
+                android:textColor="@color/secondary"
                 android:textSize="@dimen/detail_title_text_size"
                 android:textStyle="bold"
                 tools:text="@tools:sample/lorem"
@@ -65,7 +65,7 @@
                 android:paddingStart="@dimen/padding_left_header"
                 android:paddingEnd="@dimen/padding_left_header"
                 android:background="@color/theme_primary"
-                android:textColor="@color/mainWhite"
+                android:textColor="@color/secondary"
                 tools:text="@tools:sample/lorem"
                 />
             <TextView
