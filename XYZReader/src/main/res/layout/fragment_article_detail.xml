@@ -43,56 +43,23 @@
                 android:layout_height="wrap_content"/>
             <TextView
                 android:id="@+id/article_title"
-                style="?android:attr/textAppearanceLarge"
-                android:layout_width="match_parent"
-                android:layout_height="104dp"
-                android:lineSpacingMultiplier="0.9"
-                android:gravity="center_vertical"
-                android:background="@color/theme_primary"
-                android:paddingStart="@dimen/padding_left_header"
-                android:paddingEnd="@dimen/padding_left_header"
-                android:paddingBottom="@dimen/detail_metabar_title_bottom_padding"
-                android:textColor="@color/secondary"
-                android:textSize="@dimen/detail_title_text_size"
-                android:textStyle="bold"
                 tools:text="@tools:sample/lorem"
+                style="@style/article_title"
                 />
             <TextView
                 android:id="@+id/article_byline"
-                style="?android:attr/textAppearanceSmall"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingStart="@dimen/padding_left_header"
-                android:paddingEnd="@dimen/padding_left_header"
-                android:background="@color/theme_primary"
-                android:textColor="@color/secondary"
                 tools:text="@tools:sample/lorem"
-                />
+                style="@style/article_byline" />
             <TextView
-                    android:id="@+id/article_body"
-                    style="?android:attr/textAppearanceMedium"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/detail_inner_horiz_margin"
-                    android:layout_marginLeft="@dimen/detail_inner_horiz_margin"
-                    android:layout_marginRight="@dimen/detail_inner_horiz_margin"
-                    android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier"
-                    android:paddingBottom="@dimen/detail_body_bottom_margin"
-                    android:textColor="@color/mainText"
-                    android:textColorLink="@color/theme_accent"
-                    android:textSize="@dimen/detail_body_text_size"
-                    tools:text="@tools:sample/lorem/random"/>
+                android:id="@+id/article_body"
+                tools:text="@tools:sample/lorem/random"
+                style="@style/article_body" />
         </LinearLayout>
     </com.example.xyzreader.ui.ObservableScrollView>
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/share_fab"
-        android:layout_gravity="end"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="288dp"
         android:src="@drawable/ic_share"
-        android:contentDescription="@string/action_share"
         app:fabSize="normal"
         app:pressedTranslationZ="12dp"
-        />
+        style="@style/share_fab" />
 </com.example.xyzreader.ui.DrawInsetsFrameLayout>
