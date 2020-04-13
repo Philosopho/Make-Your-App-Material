@@ -10,7 +10,7 @@
     <dimen name="up_button_width">112dp</dimen>
     <dimen name="list_item_linearlayout_height">496dp</dimen>
     <dimen name="image_list_article_height">160dp</dimen>
-    <dimen name="article_title_height">160dp</dimen>
+    <dimen name="article_title_height">176dp</dimen>
     <dimen name="fragment_article_image_height">288dp</dimen>
     <dimen name="fab_marginTop">488dp</dimen>
     <dimen name="fab_elevation">6dp</dimen>
@@ -34,5 +34,6 @@
     <dimen name="padding_left_header">8dp</dimen>
 
     <dimen name="app_bar_height">96dp</dimen>
+    <dimen name="detail_metabar_title_bottom_padding">16dp</dimen>
 
 </resources>

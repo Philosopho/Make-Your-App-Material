@@ -33,5 +33,7 @@
     <dimen name="padding_left_header">8dp</dimen>
 
     <dimen name="app_bar_height">96dp</dimen>
+    <dimen name="detail_metabar_title_bottom_padding">16dp</dimen>
+
 
 </resources>
