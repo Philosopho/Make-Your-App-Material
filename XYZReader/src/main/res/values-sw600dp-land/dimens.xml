@@ -1,18 +1,17 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- detail -->
-    <dimen name="detail_title_text_size">74sp</dimen>
-    <dimen name="detail_subtitle_text_size">48sp</dimen>
-    <dimen name="detail_body_text_size">40sp</dimen>
-    <dimen name="list_item_title_text_size">40sp</dimen>
-    <dimen name="list_item_subtitle_text_size">24sp</dimen>
+    <dimen name="detail_title_text_size">42sp</dimen>
+    <dimen name="detail_body_text_size">20sp</dimen>
+    <dimen name="list_item_title_text_size">80sp</dimen>
+    <dimen name="list_item_subtitle_text_size">64sp</dimen>
     <item name="detail_body_line_spacing_multiplier" format="float" type="fraction">1.3</item>
     <dimen name="fab_margin">24dp</dimen>
     <dimen name="up_button_width">112dp</dimen>
-    <dimen name="list_item_linearlayout_height">496dp</dimen>
+    <dimen name="list_item_linearlayout_height">640dp</dimen>
     <dimen name="image_list_article_height">160dp</dimen>
     <dimen name="article_title_height">160dp</dimen>
     <dimen name="fragment_article_image_height">288dp</dimen>
-    <dimen name="fab_marginTop">488dp</dimen>
+    <dimen name="fab_marginTop">344dp</dimen>
     <dimen name="fab_elevation">6dp</dimen>
     <dimen name="design_fab_image_size" tools:override="true">36dp</dimen>
 

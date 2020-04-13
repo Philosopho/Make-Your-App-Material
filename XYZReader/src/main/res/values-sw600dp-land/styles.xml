@@ -93,7 +93,7 @@
     <style name="app_title">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:scaleType">center</item>
+        <item name="android:scaleType">fitCenter</item>
         <item name="android:contentDescription">@string/app_name</item>
     </style>
 
@@ -107,7 +107,7 @@
         <item name="android:paddingBottom">@dimen/list_padding_bottom</item>
     </style>
 
-    <style name="article_subtitle" parent="TextAppearance.AppCompat.Body1">
+    <style name="article_subtitle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:paddingTop">@dimen/list_item_padding_top</item>
@@ -115,17 +115,19 @@
         <item name="android:paddingRight">@dimen/list_item_padding</item>
         <item name="android:paddingBottom">@dimen/list_item_padding</item>
         <item name="android:textColor">@color/secondary</item>
+        <item name="android:textSize">@dimen/list_item_subtitle_text_size</item>
         <item name="android:maxLines">2</item>
         <item name="android:ellipsize">end</item>
     </style>
 
-    <style name="list_item_article_title" parent="TextAppearance.AppCompat.Subhead">
+    <style name="list_item_article_title">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:paddingLeft">@dimen/list_item_padding</item>
         <item name="android:paddingTop">@dimen/list_item_padding</item>
         <item name="android:paddingRight">@dimen/list_item_padding</item>
         <item name="android:textColor">@color/secondary</item>
+        <item name="android:textSize">@dimen/list_item_title_text_size</item>
         <item name="android:ellipsize">end</item>
         <item name="android:maxLines">4</item>
     </style>
@@ -143,5 +145,6 @@
         <item name="android:orientation">vertical</item>
         <item name="android:background">@drawable/primary_gradient</item>
     </style>
+
 
 </resources>

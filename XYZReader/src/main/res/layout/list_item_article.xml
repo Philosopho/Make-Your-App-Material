@@ -10,49 +10,23 @@
     android:focusable="true"
     android:foreground="?selectableItemBackground">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/list_item_linearlayout_height"
-        android:orientation="vertical"
-        android:background="@drawable/primary_gradient"
-        >
+    <LinearLayout style="@style/list_item_linear_layout">
 
         <!--suppress AndroidLintContentDescription -->
         <com.example.xyzreader.ui.DynamicHeightNetworkImageView
             android:id="@+id/thumbnail"
-            android:layout_width="match_parent"
-            android:layout_height="104dp"
-            android:background="@color/photo_placeholder"
-            android:scaleType="centerCrop"
             tools:src="@tools:sample/backgrounds/scenic"
-            />
+            style="@style/list_item_image" />
 
         <TextView
             android:id="@+id/article_title"
-            style="@style/TextAppearance.AppCompat.Subhead"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="@dimen/list_item_padding"
-            android:paddingTop="@dimen/list_item_padding"
-            android:paddingRight="@dimen/list_item_padding"
-            android:textColor="@color/secondary"
-            android:ellipsize="end"
-            android:maxLines="4"
+            style="@style/list_item_article_title"
             tools:text="@tools:sample/lorem/random"
             />
 
         <TextView
             android:id="@+id/article_subtitle"
-            style="@style/TextAppearance.AppCompat.Body1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="@dimen/list_item_padding_top"
-            android:paddingLeft="@dimen/list_item_padding"
-            android:paddingRight="@dimen/list_item_padding"
-            android:paddingBottom="@dimen/list_item_padding"
-            android:textColor="@color/secondary"
-            android:maxLines="2"
-            android:ellipsize="end"
+            style="@style/article_subtitle"
             tools:text="@tools:sample/lorem/random"
             />
     </LinearLayout>
