@@ -108,7 +108,7 @@
         <item name="android:paddingBottom">@dimen/list_padding_bottom</item>
     </style>
 
-    <style name="article_subtitle" parent="TextAppearance.AppCompat.Body1">
+    <style name="article_subtitle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:paddingTop">@dimen/list_item_padding_top</item>
@@ -121,7 +121,7 @@
         <item name="android:ellipsize">end</item>
     </style>
 
-    <style name="list_item_article_title" parent="TextAppearance.AppCompat.Subhead">
+    <style name="list_item_article_title">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:paddingLeft">@dimen/list_item_padding</item>
