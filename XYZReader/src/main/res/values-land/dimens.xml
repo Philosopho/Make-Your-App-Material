@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="list_item_linearlayout_height">304dp</dimen>
-    <dimen name="list_item_title_text_size">28sp</dimen>
-    <dimen name="list_item_subtitle_text_size">22sp</dimen>
+    <dimen name="list_item_linearlayout_height">318dp</dimen>
+    <dimen name="list_item_title_text_size">24sp</dimen>
+    <dimen name="list_item_subtitle_text_size">16sp</dimen>
+    <dimen name="app_bar_height">48dp</dimen>
+
 </resources>

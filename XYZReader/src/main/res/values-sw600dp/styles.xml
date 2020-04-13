@@ -94,7 +94,8 @@
     <style name="app_title">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:scaleType">fitCenter</item>
+        <item name="android:scaleType">fitStart</item>
+        <item name="android:adjustViewBounds">true</item>
         <item name="android:contentDescription">@string/app_name</item>
     </style>
 
@@ -145,6 +146,12 @@
         <item name="android:layout_height">@dimen/list_item_linearlayout_height</item>
         <item name="android:orientation">vertical</item>
         <item name="android:background">@drawable/primary_gradient</item>
+    </style>
+
+    <style name="app_bar_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/app_bar_height</item>
+        <item name="android:background">@color/theme_primary</item>
     </style>
 
 
